@@ -1,0 +1,14 @@
+.colh5{
+    width: 50%;
+    float: left;
+}
+.colh8{
+    width: 80%;
+    float: left;
+}
+.dashboardcontent .card-header {
+   background-color: #fff;
+}
+.dashboardcontent .card-header a{
+    text-decoration: none;
+}

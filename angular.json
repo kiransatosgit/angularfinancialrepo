@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "financialrepo": {
+    "financialrepoapp1": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/financialrepo",
+            "outputPath": "dist/financialrepoapp1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -22,12 +22,19 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -60,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "financialrepo:build:production"
+              "browserTarget": "financialrepoapp1:build:production"
             },
             "development": {
-              "browserTarget": "financialrepo:build:development"
+              "browserTarget": "financialrepoapp1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "financialrepo:build"
+            "browserTarget": "financialrepoapp1:build"
           }
         },
         "test": {
@@ -84,7 +91,8 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css"
@@ -96,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "9c305a86-0929-4898-86ff-6f37f0cb1786"
   }
 }

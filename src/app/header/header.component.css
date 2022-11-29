@@ -1,0 +1,63 @@
+.mainnav ul{
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 3px solid #e9ebed;
+}
+
+.mainnav ul li{
+    margin: 0px;    
+    padding: 15px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.mainnav ul li a{
+    color: #414d5c;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px;
+}
+
+.mainnav ul li a:hover{
+    color: #0972d3;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 3px solid #0972d3;    
+    padding: 15px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .mainnav ul{
+        overflow: scroll;
+        display: inline-flex;
+        width: 481px;
+    }
+
+    .mainnav ul l1 a{ 
+        margin-bottom: 5px;
+     }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    
+    .mainnav ul{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: inline-flex;
+        width: 375px;
+    }
+
+    .mainnav ul l1 a{ 
+       margin-bottom: 5px;
+    }
+    
+  }
